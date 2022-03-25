@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --font-primary: "Baloo Da 2", serif;
+    --font-secundary: "Montserrat", serif;
+    --font-action: "Mulish", serif;
+}
+
+.icone-menu {
+    width:3rem;
+    height:3rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .icone-menu {
+    right: 16rem
+}
+
+.line {
+    width: 100%;
+    height: .2rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 3px #000;
+    border-radius: 10px;
+    transition: transform 1s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(1.5rem, .3rem);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.7rem, .4rem)
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wallpaper {
+    width: 100%;
+    height: 98%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.img-wallpaper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /*se a tela for menor, a img não será reduzida */
+    opacity: 0.5;
+    animation: zoom 25s 
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner {
+    position: absolute;
+    top: 28%;
+    left: 15%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-family: var(--font-primary);
+    font-weight: 100;
+    text-shadow: 0.3rem 0.4rem 5px rgba(190, 187, 20, 0.8);
+    line-height: 6.0rem;
+    opacity: 0;
+    animation: moveh1 1.5s .7s forwards;
+}
+
+@keyframes moveh1 {
+    0% {
+        transform: translateY(15rem) rotateY(-30deg);
+    } 
+    100% {
+        transform: translateY(0rem) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.banner p {
+    font-family: var(--font-secundary);
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: .5rem .4rem 10px rgba(190, 187, 20, 0.8);
+    margin-top: 2rem;
+    opacity: 0;
+    animation: movep 1.5s 0.4s forwards;
+}
+
+ @keyframes movep {
+    0% {
+        transform: translateX(-40rem) rotateY(-60deg);
+    } 
+    100% {
+        transform: translateY(0rem) rotateY(0deg);
+        opacity: 1;
+    }
+ }
+
+ .sidebar {
+    width: 20rem;
+    height: 98vh;
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    right:-20rem;
+    transition: all 1s;
+ }
+
+ .show-menu .sidebar {
+     right: 0;
+ }
+
+ .menu {
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -24%)
+ }
+
+ .menu-item {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+ }
+
+ .menu-link {
+    font-family: var(--font-action);
+    font-weight: 450;
+    font-size: 1.5rem;
+    color: rgb(131, 54, 141);
+    transition: color .6s;
+ }
+
+ .menu-link:hover {
+    color: rgb(23, 35, 202)
+ }
+
+ .logotipo {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    text-align: center;
+ }
+
+ img.logotipo-menu {
+    max-width: 100px;
+    max-width: 100px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.down-arrow {
+    background-color: #555;
+}
+
+.down-arrow img {
+    position: relative;
+    background-image: url('../images/down.png');
+    width: 4rem;
+    height: 4rem;
+    left: 48%;
+    top: -50px;
+}
+
+.box-text {
+    text-align: center;
+    background-color: #dd931d;
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.609));
+}
+
+.box-text h2{
+    font-family: var(--font-primary);
+    font-weight: 425;
+    font-size: 2.3rem;
+    text-shadow: .2rem .2rem 10px rgba(255, 255, 255, 0.8);
+}
+
+.box-text p {
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    display:inline-block;
+    width: 95%;
+    margin-top: 3%;
+    font-weight: 500;
+    text-shadow: .1rem .1rem 3px rgba(255, 255, 255, 0.5);
+}
