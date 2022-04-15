@@ -224,7 +224,7 @@ h1 {
     margin-top: 5rem;
 }
 
-.box-text p {
+.box-text p, .box-text ul, .box-text ol {
     font-family: var(--font-secundary);
     font-size: 1.5rem;
     display:inline-block;
@@ -237,10 +237,20 @@ h1 {
     margin-top: 2rem;
 }
 
+.box-text li {
+    list-style-type: disc;
+    margin-left: 3rems;
+}
+
 .box-text img {
     width: 600px;
     height: 400px;
     margin-top: 3rem;
+}
+
+.box-text ol {
+    margin-left: 3rem;
+    text-align: left;
 }
 
 .img-legenda {
