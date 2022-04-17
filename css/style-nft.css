@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body {
-    line-height: 1.5;
-    font-family: 'Poppins', sans-serif;
-}
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -295,6 +297,7 @@ h1 {
 .footer-col {
     width: 25%;
     padding: 0 15px;
+    flex: 1;
 }
 
 .footer-col h4 {
@@ -315,7 +318,7 @@ h1 {
     height: 2px;
     box-sizing: border-box;
     width: 200px;
-    margin-left: 45px;
+    margin-left: 5rem;
 }
 
 .footer-col ul li:not(:last-child){
@@ -333,21 +336,27 @@ h1 {
     transition: all 0.3s ease;
 }
 
+.insta {
+    display: flex;
+    flex-direction: column;
+}
+
 #icon-insta {
    display: inline-block;
    height: 40px;
    width: 40px;
    background-color: rgba(255,255,255,0.2);
-   margin: 0 10px 10px 0;
+   margin: 0 10px 10px 0; 
    text-align: center;
    line-height: 40px;
    border-radius: 50%;
    transition: all 0.3s ease;
+   margin-left: 30px;
 }
 
 .footer-col ul li a:hover{
     color: #ffffff;
-    padding-left: 10px;
+    padding-left: 10px; 
 }
 
 .ul-footer .icon-insta a:hover{
