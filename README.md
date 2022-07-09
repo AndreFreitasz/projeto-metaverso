@@ -1,2 +1,3 @@
 # projeto-metaverso
-Um WEB site com todas as especificações e explicações de um novo mundo que esta surgindo, o metaverso
+Este WEB Site é um projeto feito no primeiro semestre da faculdade, utilizando HTML, CSS e JavaScript
+
